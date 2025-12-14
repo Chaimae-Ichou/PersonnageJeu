@@ -13,6 +13,13 @@ public class PersonnageTest {
             System.out.println("Résultat obtenu : " + resultat);
             assertEquals("NORD", resultat);
         }
+    @Test
+    public void testTournerUneFois() {
+        Personnage p = new Personnage();
+        String resultat = p.tourner(1);
+        System.out.println("Résultat obtenu : " + resultat);
+        assertEquals("EST", resultat);
+    }
 
 }
 
