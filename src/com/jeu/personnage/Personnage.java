@@ -2,17 +2,13 @@ package com.jeu.personnage;
 
 
 public class Personnage {
-    public int index = 0;
-    public String[] orientations = {"NORD", "EST", "SUD", "OUEST"};
+    private Orientation orientation = Orientation.NORD;
 
-    public String tourner(int fois) {
-        index = (index + fois) % 4;
-        if (index < 0) {
-            index += 4;
-        }
+    public String tourner(int quartsDeTour) {
+        orientation = orientation.tourner(quartsDeTour);
+        return orientation.name();
+}
 
-        return orientations[index];
-    }
 }
 
 
