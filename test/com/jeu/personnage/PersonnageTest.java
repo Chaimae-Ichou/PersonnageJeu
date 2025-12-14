@@ -1,14 +1,18 @@
 package com.jeu.personnage;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class PersonnageTest {
 
         @Test
-        void testTournerZeroFois() {
+       public void testTournerZeroFois() {
             Personnage p = new Personnage();
-            assertEquals("NORD", p.tourner(0));
+            String resultat = p.tourner(0);
+            System.out.println("Résultat obtenu : " + resultat);
+            assertEquals("NORD", resultat);
         }
-    }
+
 }
+
