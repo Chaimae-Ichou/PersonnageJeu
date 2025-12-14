@@ -27,6 +27,20 @@ public class PersonnageTest {
         System.out.println("Résultat obtenu : " + resultat);
         assertEquals("SUD", resultat);
     }
+    @Test
+    public void testTournerTroisFois() {
+        Personnage p = new Personnage();
+        String resultat = p.tourner(3);
+        System.out.println("Résultat obtenu : " + resultat);
+        assertEquals("OUEST", resultat);
+    }
+    @Test
+    public void testTournerQuatreFois() {
+        Personnage p = new Personnage();
+        String resultat = p.tourner(4);
+        System.out.println("Résultat obtenu : " + resultat);
+        assertEquals("NORD", resultat);
+    }
 
 }
 

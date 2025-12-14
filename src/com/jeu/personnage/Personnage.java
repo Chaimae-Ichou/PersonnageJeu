@@ -2,12 +2,14 @@ package com.jeu.personnage;
 
 
 public class Personnage {
+    public int index = 0;
+    public String[] orientations = {"NORD", "EST", "SUD", "OUEST"};
+
     public String tourner(int fois) {
-        if (fois == 0) return "NORD";
-        if (fois == 1) return "EST";
-        if (fois == 2) return "SUD";
-        return "NORD";
+        index = (index + fois) % 4;
+        return orientations[index];
     }
 }
+
 
 
