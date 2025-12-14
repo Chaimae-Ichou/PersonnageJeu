@@ -20,6 +20,13 @@ public class PersonnageTest {
         System.out.println("Résultat obtenu : " + resultat);
         assertEquals("EST", resultat);
     }
+    @Test
+    public void testTournerDeuxFois() {
+        Personnage p = new Personnage();
+        String resultat = p.tourner(2);
+        System.out.println("Résultat obtenu : " + resultat);
+        assertEquals("SUD", resultat);
+    }
 
 }
 
