@@ -7,6 +7,10 @@ public class Personnage {
 
     public String tourner(int fois) {
         index = (index + fois) % 4;
+        if (index < 0) {
+            index += 4;
+        }
+
         return orientations[index];
     }
 }
